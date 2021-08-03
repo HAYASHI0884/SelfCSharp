@@ -7,12 +7,18 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            Console.Write("整数値を入力：");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("a=" + a);
-            if (a > 0)
+            object obj = "こんにちは";
+            switch (obj)
             {
-                Console.WriteLine("aは正の数です。");
+                case int i:
+                    Console.WriteLine(Math.Abs(i));
+                    break;
+                case string str:
+                    Console.WriteLine(str[0]);
+                    break;
+                default:
+                    Console.WriteLine("意図しない型です");
+                    break;
             }
         }
     }
