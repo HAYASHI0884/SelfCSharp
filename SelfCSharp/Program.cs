@@ -7,8 +7,13 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            string value = null;
-            Console.WriteLine(sizeof(int));
+            Console.Write("整数値を入力：");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("a=" + a);
+            if (a > 0)
+            {
+                Console.WriteLine("aは正の数です。");
+            }
         }
     }
 }
