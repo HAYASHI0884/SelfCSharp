@@ -7,10 +7,13 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            for (int i = 0; i < 6; Console.WriteLine($"{i}番目のループです。"), i++) ;
-            for (int i = 1, j = 1; i < 6; i++, j++)
+            for (int i = 1; i <= 9; i++)
             {
-                Console.WriteLine(i * j);
+                for (int j = 1; j <= 9; j++)
+                {
+                    Console.Write(i * j + " ");
+                }
+                Console.WriteLine();
             }
         }
     }
