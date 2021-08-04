@@ -7,18 +7,10 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            object obj = "こんにちは";
-            switch (obj)
+            for (int i = 0; i < 6; Console.WriteLine($"{i}番目のループです。"), i++) ;
+            for (int i = 1, j = 1; i < 6; i++, j++)
             {
-                case int i:
-                    Console.WriteLine(Math.Abs(i));
-                    break;
-                case string str:
-                    Console.WriteLine(str[0]);
-                    break;
-                default:
-                    Console.WriteLine("意図しない型です");
-                    break;
+                Console.WriteLine(i * j);
             }
         }
     }
