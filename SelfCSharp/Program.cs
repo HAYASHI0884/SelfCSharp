@@ -7,19 +7,12 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            int sum = 0;
+            var str = "プログラミング言語";
+            var strings = "鈴木\t太郎\t男\t50歳\t広島県";
+            var result = strings.Split("\t");
 
-            for (int i = 100; i <= 200; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    continue;
-                }
-
-                sum += i;
-            }
-
-            Console.WriteLine($"合計額は{sum}です。");
+            Console.WriteLine(str.Substring(4, 3));
+            Console.WriteLine(string.Join(",", result));
         }
     }
 }
