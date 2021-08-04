@@ -7,14 +7,19 @@ namespace SelfCSharp
     {
         static void Main()
         {
-            for (int i = 1; i <= 9; i++)
+            int sum = 0;
+
+            for (int i = 100; i <= 200; i++)
             {
-                for (int j = 1; j <= 9; j++)
+                if (i % 2 == 0)
                 {
-                    Console.Write(i * j + " ");
+                    continue;
                 }
-                Console.WriteLine();
+
+                sum += i;
             }
+
+            Console.WriteLine($"合計額は{sum}です。");
         }
     }
 }
