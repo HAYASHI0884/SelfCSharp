@@ -18,5 +18,7 @@ namespace SelfCSharp
             };
         }
     }
+
+    Console.WriteLine("こんにちは！");
 }
 
