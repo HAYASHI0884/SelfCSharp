@@ -8,24 +8,14 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int result = rnd.Next(1, 11);
-
-            Console.WriteLine(result);
-
-            if (5 <= result)
+            for (int i = 1; i <= 9; i++)
             {
-                for (int i = 1; i <= result; i++)
+                for (int f = 1; f <= 9; f++)
                 {
-                    Console.Write("★ ");
+                    Console.Write(f + "*" + i + "=" + i * f + " ");
                 }
-            }
-            else
-            {
-                for (int i = 1; i <= result; i++)
-                {
-                    Console.Write("☆ ");
-                }
+
+                Console.WriteLine();
             }
         }
     }
