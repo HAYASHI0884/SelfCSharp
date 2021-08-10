@@ -8,41 +8,41 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 10; i++)
-            {
-                for (int f = 1; f <= 10; f++)
-                {
-                    if (f <= i)
-                    {
-                        Console.Write("■ ");
-                    }
-                    else
-                    {
-                        Console.Write("□ ");
-                    }
-                }
+            Random rnd = new Random();
+            var list = new List<int>(10);
+            var orMore = new List<int>();
+            var orLess = new List<int>();
 
-                Console.WriteLine();
+            for (int i = 0; i < list.Capacity; i++)
+            {
+                int result = rnd.Next(1, 101);
+                list.Add(result);
+                Console.Write($"{result} ");
+
+                if (50 <= result)
+                {
+                    orMore.Add(result);
+                }
+                else
+                {
+                    orLess.Add(result);
+                }
             }
 
             Console.WriteLine();
-
-            for (int i = 1; i <= 10; i++)
+            Console.Write($"50以上の数 : ");
+            foreach (int num in orMore)
             {
-                for (int f = 1; f <= 10; f++)
-                {
-                    if (f != i)
-                    {
-                        Console.Write("■ ");
-                    }
-                    else
-                    {
-                        Console.Write("□ ");
-                    }
-                }
-
-                Console.WriteLine();
+                Console.Write(num + " ");
             }
+
+            Console.WriteLine();
+            Console.Write($"50未満の数 : ");
+            foreach (int num2 in orLess)
+            {
+                Console.Write(num2 + " ");
+            }
+
         }
     }
 }
