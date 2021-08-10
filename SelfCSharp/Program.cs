@@ -6,15 +6,22 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            Random rnd = new System.Random();
+            Console.WriteLine("数値を入力して下さい。");
+            var num = int.Parse(Console.ReadLine());
 
-            int[] a = new int[7];
-
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 1; i <= num; i++)
             {
-                int result = rnd.Next(1, 11);
-                a[i] = result;
-                Console.WriteLine(a[i]);
+                Console.Write("■ ");
+            }
+
+            Console.WriteLine("数値を入力して下さい。");
+            var num2 = int.Parse(Console.ReadLine());
+            int i2 = 1;
+
+            while (i2 <= num2)
+            {
+                i2++;
+                Console.Write("■ ");
             }
         }
     }
