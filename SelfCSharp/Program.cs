@@ -8,35 +8,25 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            Random rnd = new System.Random();
+            Random rnd = new Random();
+            int result = rnd.Next(1, 11);
 
-            int[] a = new int[5];
-            var even = new List<int>();
-            var odd = new List<int>();
+            Console.WriteLine(result);
 
-            for (int i = 0; i < a.Length; i++)
+            if (5 <= result)
             {
-                int result = rnd.Next(1, 101);
-                a[i] = result;
-                Console.WriteLine(a[i]);
-
-                if (result % 2 == 0)
+                for (int i = 1; i <= result; i++)
                 {
-                    even.Add(result);
-                }
-                else
-                {
-                    odd.Add(result);
+                    Console.Write("★ ");
                 }
             }
-
-            int intMax = a.Max();
-            int intMin = a.Min();
-
-            Console.WriteLine($"最大値:{intMax}");
-            Console.WriteLine($"最小値:{intMin}");
-            Console.WriteLine($"偶数の数{even.Count}");
-            Console.WriteLine($"奇数の数{odd.Count}");
+            else
+            {
+                for (int i = 1; i <= result; i++)
+                {
+                    Console.Write("☆ ");
+                }
+            }
         }
     }
 }
