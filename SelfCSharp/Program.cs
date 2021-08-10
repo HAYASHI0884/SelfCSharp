@@ -6,12 +6,13 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            int num = 0;
+            Random rnd = new System.Random();
+            int result = 1;
 
-            while (0 <= num)
+            while (result % 10 != 0)
             {
-                Console.WriteLine("0以上の数値を入力して下さい。");
-                num = int.Parse(Console.ReadLine());
+                result = rnd.Next(1, 101);
+                Console.WriteLine(result);
             }
 
             Console.WriteLine("終了します");
