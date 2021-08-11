@@ -6,9 +6,27 @@ using System.Threading.Tasks;
 
 namespace SelfCSharp
 {
-    class Data
+    class TwoStrings
     {
-        internal int Number = 0;
-        internal string Comment = "";
+        private string string1;
+        //  二つ目の文字列
+        private string string2;
+        //  一つ目の文字列を設定
+        public string String1
+        {
+            set { string1 = value; }
+            get { return string1; }
+        }
+        //  一つ目の文字列を設定
+        public string String2
+        {
+            set { string2 = value; }
+            get { return string2; }
+        }
+
+        public string GetConnectedString()
+        {
+            return String1 + String2;
+        }
     }
 }
