@@ -10,12 +10,13 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            TwoStrings s = new TwoStrings();
-            s.String1 = "Hello";
-            s.String2 = "World";
-            Console.WriteLine("一つ目の文字列は" + s.String1);
-            Console.WriteLine("二つ目の文字列は" + s.String2);
-            Console.WriteLine("二つの文字列を合成したものは" + s.GetConnectedString());
+            Calculation c = new Calculation();
+            c.Number1 = 8;    //  一つ目の数をセット
+            c.Number2 = 9;    //  二つ目の数をセット
+            //  二つの数の和を表示
+            Console.WriteLine("{0} + {1} = {2}", c.Number1, c.Number2, c.Add());
+            //  二つの数の差を表示
+            Console.WriteLine("{0} - {1} = {2}", c.Number1, c.Number2, c.Sub());
         }
     }
 }
