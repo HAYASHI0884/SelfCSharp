@@ -10,25 +10,17 @@ namespace SelfCSharp
     {
         static void Main(string[] args)
         {
-            var count = new List<string> { };
+            Console.WriteLine("数値を入力してください");
+            int n = int.Parse(Console.ReadLine());
+            int num = n;
+            int ans = num;
 
-            for (int a = 1; a <= 100; a++)
+            for (int i = 1; i < n; i++)
             {
-                for (int b = 1; b <= 100; b++)
-                {
-                    for (int c = 1; c <= 100; c++)
-                    {
-                        if (Math.Pow(a, 2) + Math.Pow(b, 2) == Math.Pow(c, 2) && a < b)
-                        {
-                            string p = $"a = {a}, b = {b}, c = {c}";
-                            count.Add(p);
-                            Console.WriteLine(p);
-                        }
-                    }
-                }
+                ans *= num - i;
             }
 
-            Console.WriteLine(count.Count);
+            Console.WriteLine(ans);
         }
     }
 }
