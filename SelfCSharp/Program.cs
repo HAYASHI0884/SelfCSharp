@@ -11,9 +11,9 @@ namespace SelfCSharp
         static void Main(string[] args)
         {
             MinMax m = new MinMax();
-            int a = 4, b = 2;
-            Console.WriteLine($"{0}と{1}のうち、最大のものは{2}", a, b, m.Max(a, b));
-            Console.WriteLine($"{0}と{1}のうち、最小のものは{2}", a, b, m.Min(a, b));
+            int a = 3, b = 2, c = 1;
+            Console.WriteLine("{0}と{1}と{2}のうち、最大のものは{3}", a, b, c, m.Max(a, b, c));
+            Console.WriteLine("{0}と{1}と{2}のうち、最小のものは{3}", a, b, c, m.Min(a, b, c));
         }
     }
 }
