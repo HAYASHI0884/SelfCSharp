@@ -8,23 +8,34 @@ namespace CSharpPractice
 {
     class Program
     {
-        static int Mul(int a, int b, int c)
+        //static int Mul(int a, int b, int c)
+        //{
+        //    return a * b * c;
+        //}
+
+        static void Square(int a, int b)
         {
-            return a * b * c;
+            if (a != 0 && b != 0)
+            {
+                for (int i = 1; i <= a; i++)
+                {
+                    for (int j = 1; j <= b; j++)
+                    {
+                        Console.Write("■ ");
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
 
         static void Main(string[] args)
         {
             Random r = new Random();
-            int a = r.Next(1, 11);  //  aに1から10の乱数を代入
-            int b = r.Next(1, 11);  //  bに1から10の乱数を代入
-            Console.WriteLine("c =");
-            int c = int.Parse(Console.ReadLine());
-            int result = Mul(a, b, c);  //  二つの数の積を求める
-            Console.WriteLine("a = " + a);
-            Console.WriteLine("b = " + b);
-            Console.WriteLine("c = " + c);
-            Console.WriteLine("a * b * c = {0}", result);
+            int a = r.Next(1, 11);
+            int b = r.Next(1, 11);
+            Console.WriteLine("たて:" + a);
+            Console.WriteLine("よこ:" + b);
+            Square(a, b);
         }
     }
 }
