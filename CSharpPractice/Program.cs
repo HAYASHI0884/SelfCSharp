@@ -8,25 +8,23 @@ namespace CSharpPractice
 {
     class Program
     {
-        static int Add(int a, int b)
+        static int Mul(int a, int b, int c)
         {
-            return a + b;
-        }
-
-        static int Sub(int a, int b)
-        {
-            return a - b;
+            return a * b * c;
         }
 
         static void Main(string[] args)
         {
-            //  キーボードから整数の値を入力
-            Console.Write("a=");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("b=");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine("a + b = {0}", Add(a, b));
-            Console.WriteLine($"a - b = {Sub(a, b)}");
+            Random r = new Random();
+            int a = r.Next(1, 11);  //  aに1から10の乱数を代入
+            int b = r.Next(1, 11);  //  bに1から10の乱数を代入
+            Console.WriteLine("c =");
+            int c = int.Parse(Console.ReadLine());
+            int result = Mul(a, b, c);  //  二つの数の積を求める
+            Console.WriteLine("a = " + a);
+            Console.WriteLine("b = " + b);
+            Console.WriteLine("c = " + c);
+            Console.WriteLine("a * b * c = {0}", result);
         }
     }
 }
