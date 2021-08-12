@@ -10,13 +10,17 @@ namespace CSharpPractice
     {
         static void Main(string[] args)
         {
-            NewCalc n = new NewCalc();
-            n.Number1 = 10;   //  一つ目の数を設定
-            n.Number2 = 2;    //  二つ目の数を設定
-            Console.WriteLine(n.Number1 + " + " + n.Number2 + " = " + n.Add());
-            Console.WriteLine(n.Number1 + " - " + n.Number2 + " = " + n.Sub());
-            Console.WriteLine(n.Number1 + " * " + n.Number2 + " = " + n.Mul());
-            Console.WriteLine(n.Number1 + " / " + n.Number2 + " = " + n.Div());
+            //  Animalクラスのオブジェクトの配列を生成
+            Animal[] animals = new Animal[2];
+            animals[0] = new Dog();     //  犬クラスのインスタンス生成
+            animals[1] = new Monkey();  // 猿クラスのインスタンスの生成
+            for (int i = 0; i < animals.Length; i++)
+            {
+                animals[i].ShowName();
+                animals[i].Move();
+                animals[i].Bark();
+                Console.WriteLine("------------");
+            }
         }
     }
 }
