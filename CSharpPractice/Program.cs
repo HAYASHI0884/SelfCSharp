@@ -8,34 +8,23 @@ namespace CSharpPractice
 {
     class Program
     {
-        //static int Mul(int a, int b, int c)
-        //{
-        //    return a * b * c;
-        //}
-
-        static void Square(int a, int b)
-        {
-            if (a != 0 && b != 0)
-            {
-                for (int i = 1; i <= a; i++)
-                {
-                    for (int j = 1; j <= b; j++)
-                    {
-                        Console.Write("■ ");
-                    }
-                    Console.WriteLine();
-                }
-            }
-        }
-
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int a = r.Next(1, 11);
-            int b = r.Next(1, 11);
-            Console.WriteLine("たて:" + a);
-            Console.WriteLine("よこ:" + b);
-            Square(a, b);
+            Counter c1, c2;
+            c1 = new Counter();
+            c2 = new Counter();
+            c1.Increment();
+            c2.Increment();
+            c2.Increment();
+            c2.Reset();
+            c1.Increment();
+            c1.Increment();
+            c2.Increment();
+            Console.WriteLine("c1のカウント数：" + c1.Count);
+            Console.WriteLine("c2のカウント数：" + c2.Count);
+            Counter.AddTotalCount(c1.Count);
+            Counter.AddTotalCount(c2.Count);
+            Console.WriteLine("トータルのカウント数:" + Counter.TotalCount);
         }
     }
 }
