@@ -10,21 +10,14 @@ namespace CSharpPractice
     {
         static void Main(string[] args)
         {
-            Counter c1, c2;
-            c1 = new Counter();
-            c2 = new Counter();
-            c1.Increment();
-            c2.Increment();
-            c2.Increment();
-            c2.Reset();
-            c1.Increment();
-            c1.Increment();
-            c2.Increment();
-            Console.WriteLine("c1のカウント数：" + c1.Count);
-            Console.WriteLine("c2のカウント数：" + c2.Count);
-            Counter.AddTotalCount(c1.Count);
-            Counter.AddTotalCount(c2.Count);
-            Console.WriteLine("トータルのカウント数:" + Counter.TotalCount);
+            Fighter f = new Fighter();      //  戦闘機クラス
+            Airplane a = new Airplane();    //  飛行機クラス
+            //  飛行機が飛行する
+            a.Fly();
+            //  戦闘機が飛行する
+            f.Fly();
+            //  戦闘機が戦闘する
+            f.Fight();
         }
     }
 }
