@@ -10,12 +10,17 @@ namespace CSharpPractice
     {
         public Sample()
         {
-            Console.WriteLine("コンストラクタ");
+            Console.WriteLine("スタート");
         }
 
-        public void foo()
+        public void func()
         {
-            Console.WriteLine("foo");
+            Console.WriteLine("func");
+        }
+
+        ~Sample()
+        {
+            Console.WriteLine("エンド");
         }
     }
 }

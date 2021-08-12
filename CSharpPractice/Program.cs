@@ -8,14 +8,25 @@ namespace CSharpPractice
 {
     class Program
     {
+        static int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        static int Sub(int a, int b)
+        {
+            return a - b;
+        }
+
         static void Main(string[] args)
         {
-            Calc c1 = new Calc(), c2 = new Calc(3, 1);
-            c1.Num1 = 1;
-            c1.Num2 = 2;
-            //  加算の結果を表示
-            c1.ShowAdd();
-            c2.ShowAdd();
+            //  キーボードから整数の値を入力
+            Console.Write("a=");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("b=");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("a + b = {0}", Add(a, b));
+            Console.WriteLine($"a - b = {Sub(a, b)}");
         }
     }
 }
