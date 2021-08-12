@@ -8,7 +8,6 @@ namespace CSharpPractice
 {
     internal class Sample
     {
-
         public Sample()
         {
             Console.WriteLine("コンストラクタ");

@@ -10,8 +10,12 @@ namespace CSharpPractice
     {
         static void Main(string[] args)
         {
-            Sample s = new Sample();
-            s.foo();
+            Calc c1 = new Calc(), c2 = new Calc(3, 1);
+            c1.Num1 = 1;
+            c1.Num2 = 2;
+            //  加算の結果を表示
+            c1.ShowAdd();
+            c2.ShowAdd();
         }
     }
 }
