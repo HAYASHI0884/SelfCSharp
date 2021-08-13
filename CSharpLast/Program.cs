@@ -10,28 +10,48 @@ namespace CSharpLast
     {
         static void Main(string[] args)
         {
-            CellPhone cp = new CellPhone();
-            FuncPhone(cp);
-            FuncMailer(cp);
-            FuncComputer(cp);
-        }
-        //  電話としての処理
-        public static void FuncPhone(IPhone phone)
-        {
-            phone.CallPhone();      //  電話を掛ける
-            phone.RecievePhone();   //  電話を受ける
-        }
-        //  メーラーとしての処理
-        public static void FuncMailer(IMailer mailer)
-        {
-            mailer.SendMail();      //  メールを送信する
-            mailer.RecieveMail();   //  メールを受信する
-        }
-        //  コンピュータとしての処理
-        public static void FuncComputer(IComputer computer)
-        {
-            computer.PlayGame();    //  ゲームをする
-            computer.BrowseWeb();   //  ウェブを閲覧する
+            Random r = new Random();
+            List<int> even = new List<int>();
+            List<int> odd = new List<int>();
+
+            //int result = r.Next(0, 11);
+            //Console.WriteLine(result);
+
+            for (int i = 1; i != 0; i++)
+            {
+                int result = r.Next(0, 11);
+                if (result == 0)
+                {
+                    Console.WriteLine($"0~10の値を出力:{result}");
+                    break;
+                }
+                else if (result % 2 == 0)
+                {
+                    Console.WriteLine($"0~10の値を出力:{result}");
+                    even.Add(result);
+                }
+                else
+                {
+                    Console.WriteLine($"0~10の値を出力:{result}");
+                    odd.Add(result);
+                }
+            }
+
+            Console.Write("偶数:");
+
+            foreach (int e in even)
+            {
+                Console.Write($"{e} ");
+            }
+
+            Console.WriteLine();
+            Console.Write("奇数:");
+
+            foreach (int o in odd)
+            {
+                Console.Write($"{o} ");
+            }
+
         }
     }
 }
